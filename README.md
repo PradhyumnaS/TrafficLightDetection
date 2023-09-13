@@ -7,7 +7,7 @@ The different file sizes indicate the size of the model; the available sizes are
 
 This README file provides necessary instructions to load, use, and understand the models in this repository. 
 
-## File Structure 
+## Models
 
 * `best_traffic_med_yolo_v8.pt`
    The trained medium-sized Yolo v8 model file.
@@ -31,4 +31,7 @@ This README file provides necessary instructions to load, use, and understand th
 
 
 ## Usage
-Run `livetest.py` script file to perform a live test of each model. Make sure to include the paths to desired `.pt` file in the script to ensure that the proper model is loaded.
+Run `examples/Example.py` script file to perform a live test of each model. Make sure to include the paths to desired `.pt` model in the script to ensure that the proper model is loaded.
+
+Webcam Realtime Test
+Run `examples/Webcam Example.py` script file to perform a live test of each model. Make sure to include the paths to desired `.pt` model in the script to ensure that the proper model is loaded.
