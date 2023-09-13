@@ -2,7 +2,7 @@ from ultralytics import YOLO
 from PIL import Image
 
 # Load a pretrained YOLOv8n model
-model = YOLO('best_traffic_small_yolo.pt')
+model = YOLO('models/best_traffic_small_yolo.pt')
 
 test_iamge_url = 'https://sanjosespotlight.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/05/19153716/IMG_9313-scaled.jpg'
 

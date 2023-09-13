@@ -3,7 +3,7 @@ from PIL import Image
 from ultralytics import YOLO
 
 # Load a pretrained YOLOv8n model
-model = YOLO('best_traffic_small_yolo.pt')
+model = YOLO('models/best_traffic_small_yolo.pt')
 
 # open a video file or start a video stream
 cap = cv2.VideoCapture(0)  # replace with 0 for webcam
