@@ -1,8 +1,9 @@
-from flask import Flask, request, render_template, send_file
+from flask import Flask, request, render_template
 from ultralytics import YOLO
 from PIL import Image
 import io
 import os
+import base64
 import tempfile
 
 app = Flask(__name__)
@@ -36,7 +37,8 @@ def upload_image():
 
         os.remove(temp_file.name)
 
-        return send_file(img_io, mimetype='image/jpeg', as_attachment=True, download_name='results.jpg')
+        img_base64 = base64.b64encode(img_io.getvalue()).decode('utf-8')
+        return render_template('result.html', result_image=img_base64)
 
     return "Error with image processing", 500
 
